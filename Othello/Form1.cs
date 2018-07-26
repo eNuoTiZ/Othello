@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Othello.Properties;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
 
 namespace Othello
 {
@@ -25,6 +27,7 @@ namespace Othello
         public Form1()
         {
             InitializeComponent();
+            AppCenter.Start("c19c0fce-cc65-4b15-880e-456344e83cb0", typeof(Analytics));
 
             lbPastHistory = new ListBox { Parent = this, Width = 100, Height = 244, Top = 135, Left = 393 };
             Controls.Add(lbPastHistory);
